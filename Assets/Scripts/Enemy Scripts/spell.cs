@@ -13,7 +13,7 @@ public class spell : MonoBehaviour {
 	void Start () {
 
 		step = speed * Time.deltaTime;
-        targetPoint = player.transform.position;
+		targetPoint = GameObject.FindGameObjectWithTag("Player").transform.position;
 
 		Vector3 newDir = Vector3.RotateTowards(transform.forward, targetPoint, step, 0.0f);
 		transform.rotation = Quaternion.LookRotation(newDir);
@@ -24,8 +24,8 @@ public class spell : MonoBehaviour {
 		transform.position = Vector3.MoveTowards(transform.position, targetPoint, step);
 
 		if (transform.position == targetPoint) {
-		
-			Destroy (gameObject, 0.2f);
+
+			gameObject.GetComponent<poolObject>().destroy();
 		}
     }
 

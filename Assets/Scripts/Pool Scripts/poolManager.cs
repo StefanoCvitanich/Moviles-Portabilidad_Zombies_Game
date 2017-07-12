@@ -6,6 +6,8 @@ public class poolManager : MonoBehaviour {
 
     public GameObject zombie;
     public GameObject sorcerer;
+	public GameObject giant;
+	public GameObject spell;
     public GameObject enemySpawner;
 	public GameObject healthItem;
 
@@ -13,9 +15,13 @@ public class poolManager : MonoBehaviour {
 
         enemySpawner.GetComponent<enemySpawner>().player = GameObject.FindGameObjectWithTag("Player");
 
-        createPool(zombie, 2);
+        createPool(zombie, 45);
 
-        createPool(sorcerer, 2);
+        createPool(sorcerer, 15);
+
+		createPool (giant, 5);
+
+		createPool (spell, 20);
 
 		createPool (healthItem, 5);
 

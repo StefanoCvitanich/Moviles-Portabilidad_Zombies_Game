@@ -9,12 +9,14 @@ public class enemyAttack : MonoBehaviour {
 	private float timer = 0;
 
     GameObject player;
+	GameObject poolManager;
     public GameObject healTraget;
     public GameObject spell;
     
     // Use this for initialization
 	void Start () {
         player = GameObject.FindGameObjectWithTag("Player");
+		poolManager = GameObject.FindGameObjectWithTag ("poolManager");
     }
 	
 	// Update is called once per frame
@@ -33,9 +35,8 @@ public class enemyAttack : MonoBehaviour {
         if (timer >= 3)
         {
 			if (Vector3.Distance (transform.position, player.transform.position) <= 8) 
-			{  
-				GameObject ps =  Instantiate(spell, gameObject.transform.position + Vector3.up, gameObject.transform.rotation);
-                ps.GetComponent<spell>().player = player;          
+			{           
+				poolManager.GetComponent<poolManager>().reuseObject(spell, gameObject.transform.position + Vector3.up, gameObject.transform.rotation);
 				timer = 0;
 			}	
         } 

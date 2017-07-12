@@ -5,32 +5,46 @@ using UnityEngine;
 public class enemySpawner : MonoBehaviour
 {
 
-    private float timer;
+    private float zombieTimer;
+	private float sorcererTimer;
+	private float giantTimer;
+
     public GameObject zombie;
     public GameObject sorcerer;
+	public GameObject giant;
     public GameObject player;
     public GameObject poolManager;
 
     // Use this for initialization
     void Start()
     {
-        timer = 0;
+		zombieTimer = 0;
+		sorcererTimer = 0;
+		giantTimer = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
 
-        timer += Time.deltaTime;
+		zombieTimer += Time.deltaTime;
+		sorcererTimer += Time.deltaTime;
+		giantTimer += Time.deltaTime;
 
-        if (timer > 5)
-        {
-            spawnZombie();
-
-            spawnSorcerer();
-
-            timer = 0;
-        }
+		if (zombieTimer >= 5) {
+			spawnZombie ();
+			zombieTimer = 0;
+		}
+		
+		if (sorcererTimer >= 11) {
+			spawnSorcerer ();
+			sorcererTimer = 0;
+		}
+		
+		if (giantTimer >= 23) {
+			spawnGiant ();
+			giantTimer = 0;
+		}
     }
 
     private void spawnZombie()
@@ -42,4 +56,9 @@ public class enemySpawner : MonoBehaviour
     {
         poolManager.GetComponent<poolManager>().reuseObject(sorcerer, transform.position, transform.rotation);
     }
+
+	private void spawnGiant()
+	{
+		poolManager.GetComponent<poolManager> ().reuseObject (giant, transform.position, transform.rotation);
+	}
 }

@@ -11,7 +11,21 @@ public class poolObject : MonoBehaviour {
 	}
 
 	public void destroy(){
-	
+
+		//MALISIMA IDEA!!! SE CONGELA EL JUEGO!!!
+		/*
+		if (gameObject.tag == "spell") {
+
+			float timer = 0;
+
+			do{
+				timer += Time.deltaTime;
+				Debug.Log(timer);
+			}
+			while (timer < 1); //para darle un tiempo de vida al spell luego de haber alcanzado su objetivo
+		}
+		*/
+
 		gameObject.SetActive (false);
 	}
 }

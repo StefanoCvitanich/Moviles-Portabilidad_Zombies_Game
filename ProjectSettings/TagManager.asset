@@ -9,6 +9,8 @@ TagManager:
   - enemySpawner
   - healthItem
   - poolManager
+  - giant
+  - spell
   layers:
   - Default
   - TransparentFX

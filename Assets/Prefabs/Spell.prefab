@@ -39,9 +39,10 @@ GameObject:
   - component: {fileID: 198600088202463764}
   - component: {fileID: 199233292930885890}
   - component: {fileID: 114601100002691804}
+  - component: {fileID: 114360558854188380}
   m_Layer: 0
   m_Name: Spell
-  m_TagString: Untagged
+  m_TagString: spell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -73,6 +74,17 @@ Transform:
   m_Father: {fileID: 4116479520009130}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114360558854188380
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1884032293323400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eaac4d143be24475f9b1c394c8c89996, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114601100002691804
 MonoBehaviour:
   m_ObjectHideFlags: 1
