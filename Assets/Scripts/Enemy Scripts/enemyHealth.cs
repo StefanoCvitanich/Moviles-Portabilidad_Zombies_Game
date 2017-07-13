@@ -5,6 +5,7 @@ using UnityEngine;
 public class enemyHealth : MonoBehaviour {
 
     public int health;
+	Vector3 spawnPos;
 
 	public GameObject poolManager;
 
@@ -14,6 +15,8 @@ public class enemyHealth : MonoBehaviour {
 	void Start () {
 
 		poolManager = GameObject.FindGameObjectWithTag ("poolManager");
+
+		spawnPos = new Vector3 (0, 0.5f, 0);
 	}
 	
 	// Update is called once per frame
@@ -33,8 +36,11 @@ public class enemyHealth : MonoBehaviour {
 
 			//Debug.Log (randomNumber);
 
-			if(randomNumber == 2)
-				poolManager.GetComponent<poolManager> ().reuseObject (poolManager.GetComponent<poolManager> ().healthItem, transform.position, transform.rotation);
+			if(randomNumber == 2){
+
+				spawnPos += transform.position;
+				poolManager.GetComponent<poolManager> ().reuseObject (poolManager.GetComponent<poolManager> ().healthItem, spawnPos, transform.rotation);
+			}
 		}
     }
 

@@ -1024,6 +1024,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 5
+  poolManager: {fileID: 0}
 --- !u!114 &114416062766721406
 MonoBehaviour:
   m_ObjectHideFlags: 1
