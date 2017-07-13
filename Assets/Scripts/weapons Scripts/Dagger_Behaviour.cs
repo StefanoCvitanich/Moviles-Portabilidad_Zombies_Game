@@ -12,6 +12,10 @@ public class Dagger_Behaviour : MonoBehaviour {
 	void Start () {
 
 		timer = 0;
+
+		//transform.rotation = Quaternion.AngleAxis (180, transform.parent.up);
+
+		//transform.eulerAngles = new Vector3 (0, 180, 0);
 	}
 	
 	// Update is called once per frame

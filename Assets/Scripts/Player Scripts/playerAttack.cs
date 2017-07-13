@@ -59,14 +59,14 @@ public class playerAttack : MonoBehaviour {
 
 			if (display_Dagger.activeSelf == true) {
 
-				if (timer >= 1) {
+				if (timer >= 0.3) {
 					poolManager.GetComponent<poolManager> ().reuseObject (dagger, transform.position + Vector3.up * 1 / 2, transform.rotation /*+ Quaternion.AngleAxis(180, Vector3.up)*/);
 					timer = 0;
 				}
 			}
 		}
 
-		if (timer > 120)
+		if (timer > 60)
 			timer = 1;
 	}
 }

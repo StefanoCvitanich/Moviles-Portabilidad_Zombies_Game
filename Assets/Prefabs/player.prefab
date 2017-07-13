@@ -258,7 +258,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1303848772922612
 GameObject:
   m_ObjectHideFlags: 1
@@ -507,6 +507,7 @@ GameObject:
   - component: {fileID: 136812762009647178}
   - component: {fileID: 143457162142245752}
   - component: {fileID: 114706209376708554}
+  - component: {fileID: 114279536909014934}
   m_Layer: 0
   m_Name: player
   m_TagString: Player
@@ -578,7 +579,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1830135212940232
 GameObject:
   m_ObjectHideFlags: 1
@@ -1626,6 +1627,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   meleDamage: 3
+--- !u!114 &114279536909014934
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1702454691884602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fb3e106f8e6f4a7f9ec7f4dd1d0f8ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  daggerEnabled: 0
 --- !u!114 &114612977022131632
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1649,6 +1662,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc6753dca028d4c12aaecb0c66d4583e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sword: {fileID: 1818844409454882}
+  dagger: {fileID: 1499944319482674, guid: 9d51a29e081b549988e8ead029929ec4, type: 2}
+  display_Dagger: {fileID: 1271439291086864}
   poolManager: {fileID: 0}
 --- !u!114 &114713074701738422
 MonoBehaviour:
