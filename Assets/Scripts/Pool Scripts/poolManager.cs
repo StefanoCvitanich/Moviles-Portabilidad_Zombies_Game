@@ -10,6 +10,7 @@ public class poolManager : MonoBehaviour {
 	public GameObject spell;
     public GameObject enemySpawner;
 	public GameObject healthItem;
+	public GameObject dagger;
 
     void Start() {
 
@@ -24,6 +25,8 @@ public class poolManager : MonoBehaviour {
 		createPool (spell, 20);
 
 		createPool (healthItem, 5);
+
+		createPool (dagger, 10);
 
     }
 

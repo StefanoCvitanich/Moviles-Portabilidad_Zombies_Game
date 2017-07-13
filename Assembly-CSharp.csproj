@@ -54,6 +54,7 @@
      <Compile Include="Assets\Scripts\Enemy Scripts\spell.cs" />
      <Compile Include="Assets\Scripts\Player Scripts\playerAttack.cs" />
      <Compile Include="Assets\Scripts\Player Scripts\playerHealth.cs" />
+     <Compile Include="Assets\Scripts\Player Scripts\playerInteractions.cs" />
      <Compile Include="Assets\Scripts\Player Scripts\playerMovement.cs" />
      <Compile Include="Assets\Scripts\Pool Scripts\poolManager.cs" />
      <Compile Include="Assets\Scripts\Pool Scripts\poolObject.cs" />
@@ -63,6 +64,8 @@
      <Compile Include="Assets\Scripts\healthItemBehaviour.cs" />
      <Compile Include="Assets\Scripts\menuScript.cs" />
      <Compile Include="Assets\Scripts\singleton.cs" />
+     <Compile Include="Assets\Scripts\weapons Scripts\Dagger_Behaviour.cs" />
+     <Compile Include="Assets\Scripts\weapons Scripts\sword_Behaviour.cs" />
      <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAlpha.shader" />
      <None Include="Assets\Standard Assets\ParticleSystems\ParticleSystemsGuidelines.txt" />
      <None Include="Assets\Shaders\SphereLit.shader" />

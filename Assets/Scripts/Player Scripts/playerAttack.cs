@@ -1,26 +1,72 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class playerAttack : MonoBehaviour {
 
-	public int meleDamage = 1;
+	public GameObject sword;
+	public GameObject dagger;
+	public GameObject display_Dagger;
+	public GameObject poolManager;
+
+	float timer;
 
 	// Use this for initialization
 	void Start () {
-		
+
+		//sword = GameObject.FindGameObjectWithTag ("sword");
+
+		//dagger = GameObject.FindGameObjectWithTag ("dagger");
+
+		//display_Dagger = GameObject.FindGameObjectWithTag ("displayDagger");
+
+		timer = 0;
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
 
-	void OnCollisionEnter(Collision collision){
+		timer += Time.deltaTime;
 
-		if (collision.gameObject.tag == "zombie" || collision.gameObject.tag == "sorcerer") {
+		if (Application.platform == RuntimePlatform.Android) {
 
-			collision.gameObject.GetComponent<enemyHealth> ().damaged (meleDamage);
+			//Hay que hacer que el if detecte que el joystick esta siendo usado
+
+			/*
+			if (CrossPlatformInputManager) {
+
+				if(sword.activeSelf == true){
+
+					//Activar cosas de la espada
+				}
+
+				if (display_Dagger.activeSelf == true) {
+
+					poolManager.GetComponent<poolManager> ().reuseObject (dagger, transform.position + Vector3.up * 1/2, transform.rotation);
+				}
+			}
+				*/
 		}
+
+		if (Input.GetKeyUp (KeyCode.Space)) {
+		
+			if(sword.activeSelf == true){
+
+				//Activar cosas de la espada
+			}
+
+			if (display_Dagger.activeSelf == true) {
+
+				if (timer >= 1) {
+					poolManager.GetComponent<poolManager> ().reuseObject (dagger, transform.position + Vector3.up * 1 / 2, transform.rotation /*+ Quaternion.AngleAxis(180, Vector3.up)*/);
+					timer = 0;
+				}
+			}
+		}
+
+		if (timer > 120)
+			timer = 1;
 	}
 }

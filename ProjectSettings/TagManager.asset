@@ -11,8 +11,9 @@ TagManager:
   - poolManager
   - giant
   - spell
-  - blade
   - dagger
+  - sword
+  - displayDagger
   layers:
   - Default
   - TransparentFX

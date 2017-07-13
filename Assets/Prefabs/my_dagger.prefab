@@ -72,6 +72,8 @@ GameObject:
   - component: {fileID: 4627220083826162}
   - component: {fileID: 54269487690565654}
   - component: {fileID: 65479938912329094}
+  - component: {fileID: 114327117172599138}
+  - component: {fileID: 114620668967736986}
   m_Layer: 0
   m_Name: my_dagger
   m_TagString: dagger
@@ -128,8 +130,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1499944319482674}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.0921798, y: 0.514, z: -7.922122}
+  m_LocalRotation: {x: -0, y: 0.96014255, z: -0, w: 0.2795108}
+  m_LocalPosition: {x: -3.3, y: 0.514, z: -7.58}
   m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
   m_Children:
   - {fileID: 4957912206569662}
@@ -138,7 +140,7 @@ Transform:
   - {fileID: 4621172191850638}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 147.53801, z: 0}
 --- !u!4 &4683745168227996
 Transform:
   m_ObjectHideFlags: 1
@@ -344,3 +346,25 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.5277482, y: 0.72666407, z: 7.4015427}
   m_Center: {x: 0.041176476, y: 0.32484528, z: -0.049228664}
+--- !u!114 &114327117172599138
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1499944319482674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eaac4d143be24475f9b1c394c8c89996, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114620668967736986
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1499944319482674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fa880007a39246ceaddd6895c0e15ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
